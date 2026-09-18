@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+  <title>Расписание СПбГАУ — ИАиПП, 1 курс</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">СПбГАУ</div>
+      <div>
+        <h1>Расписание</h1>
+        <p>Институт агротехнологий и пищевых производств · 1 курс</p>
+      </div>
+    </div>
+    <a class="source-link" href="https://spbgau.ru/upload/documents/schedule/%D0%98%D0%90%D0%B8%D0%9F%D0%9F%201%20%D0%BA%D1%83%D1%80%D1%81-1809.pdf" target="_blank" rel="noopener">Открыть PDF ↗</a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">2026 / 2027 учебный год</span>
+        <h2>Ваше расписание — без таблиц из PDF</h2>
+        <p>Выберите группу, день и неделю. На мобильном расписание превращается в удобные карточки.</p>
+      </div>
+      <div class="today-card">
+        <span>Сегодня</span>
+        <strong id="todayDate">—</strong>
+        <small id="todayWeek">—</small>
+      </div>
+    </section>
+
+    <section class="controls">
+      <label>
+        <span>Группа</span>
+        <select id="groupSelect"></select>
+      </label>
+      <div class="week-toggle" role="group" aria-label="Неделя">
+        <button data-week="even" class="active">Чётная</button>
+        <button data-week="odd">Нечётная</button>
+      </div>
+      <button id="todayBtn" class="secondary">Сегодня</button>
+      <button id="printBtn" class="secondary">Печать</button>
+    </section>
+
+    <section class="stats" id="stats"></section>
+
+    <nav class="days" id="days"></nav>
+    <section id="schedule" class="schedule"></section>
+
+    <section class="pdf-panel">
+      <div>
+        <h3>Оригинал расписания</h3>
+        <p>Источник данных — официальный PDF СПбГАУ. Если нужно проверить исходную таблицу, откройте документ.</p>
+      </div>
+      <a class="button" target="_blank" rel="noopener" href="https://spbgau.ru/upload/documents/schedule/%D0%98%D0%90%D0%B8%D0%9F%D0%9F%201%20%D0%BA%D1%83%D1%80%D1%81-1809.pdf">Открыть документ</a>
+    </section>
+  </main>
+
+  <footer>
+    <span>СПбГАУ · ИАиПП · 1 курс</span>
+    <span>Локальная версия · GitHub Pages / Vercel</span>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
